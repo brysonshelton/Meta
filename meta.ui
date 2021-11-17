@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>489</width>
+    <height>506</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Set style of the background frame */
+QFrame[colorStyle='backgroundFrame'] {
+    background-color: lightgray;
+}
+
+/* Set style of the frame that all the data appears in */
+QFrame[colorStyle='foregroundFrame'] {
+    background-color: white;
+    border-radius: 7px;
+    border: 1px solid gray;
+}
+
+/* Set the header label style */
+QLabel[colorStyle='headerLabel'] {
+    background-color: rgb(7, 102, 120);
+    border-radius: 7px;
+    color: white;
+}
+
+/* Button Save (green) color */
+QPushButton[colorStyle='buttonSave'] {
+    background-color: white;
+    border: 1px solid rgb(40, 167, 69);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+QPushButton[colorStyle='buttonSave']::hover {
+    color: black;
+    border: 1px solid rgb(40, 167, 69);
+    background-color: rgb(40, 167, 69);
+}
+
+QPushButton[colorStyle='buttonSave']::pressed {
+	color: black;
+	background-color: rgb(29, 120, 50);
+}
+
+/* Button Primary (blue) color */
+QPushButton[colorStyle='buttonPrimary'] {
+    background-color: rgb(7, 123, 255);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+QPushButton[colorStyle='buttonPrimary']::hover {
+    background-color: white;
+    color: rgb(7, 123, 255) ;
+    border: 1px solid rgb(7, 123, 255);
+}
+
+/* Button Warning (yellow/orange) color */
+QPushButton[colorStyle='buttonWarning'] {
+    background-color: rgb(255, 193, 7);
+    border: 1px solid rgb(255, 193, 7);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+QPushButton[colorStyle='buttonWarning']::hover {
+       color: rgb(255, 193, 7);
+    background-color: white;
+}
+
+/* Button Danger (red) color */
+QPushButton[colorStyle='buttonDanger'] {
+    background-color: rgb(191, 64, 64);
+    border: 1px solid rgb(191, 64, 64);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+QPushButton[colorStyle='buttonDanger']::hover {
+    color: rgb(191, 64, 64);
+    background-color: white;
+}
+
+/* Progress Bar*/
+QProgressBar[colorStyle='progressBar'] {
+	border: 2px solid #2196F3;
+    border-radius: 5px;
+    background-color: #E0E0E0;
+}
+
+QProgressBar[colorStyle='progressBar']::chunk {
+background-color: #2196F3;
+    width: 10px; 
+    margin: 0.5px;
+}
+
+/* Button Success (red) color */
+QPushButton[colorStyle='buttonCancel'] {
+	background-color: white;
+	border: 1px solid rgb(205, 0, 0);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+QPushButton[colorStyle='buttonCancel']::hover {
+    color: black;
+    border: 1px solid rgb(205, 0, 0);
+    background-color: rgb(205, 0, 0);
+}
+
+QPushButton[colorStyle='buttonCancel']::pressed {
+	color: black;
+	background-color: rgb(105,0 ,0);
+}</string>
+  </property>
+  <widget class="QLabel" name="lblSelectedSong">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>391</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSelectSong">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>30</y>
+     <width>121</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select Song</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblStatus">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>360</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>430</y>
+     <width>351</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>100</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="btnCancel">
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+      <property name="colorStyle" stdset="0">
+       <string>buttonCancel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnSave">
+      <property name="text">
+       <string>Save</string>
+      </property>
+      <property name="colorStyle" stdset="0">
+       <string>buttonSave</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="lblArtist">
+   <property name="geometry">
+    <rect>
+     <x>181</x>
+     <y>152</y>
+     <width>34</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Artist</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtArtist">
+   <property name="geometry">
+    <rect>
+     <x>223</x>
+     <y>152</y>
+     <width>125</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblAlbum">
+   <property name="geometry">
+    <rect>
+     <x>176</x>
+     <y>183</y>
+     <width>39</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Album</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtAlbum">
+   <property name="geometry">
+    <rect>
+     <x>223</x>
+     <y>183</y>
+     <width>125</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblTitle">
+   <property name="geometry">
+    <rect>
+     <x>188</x>
+     <y>214</y>
+     <width>27</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Title</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbGenre">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>305</y>
+     <width>131</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblReleaseDate">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>276</y>
+     <width>77</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Release Year</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtTrack">
+   <property name="geometry">
+    <rect>
+     <x>223</x>
+     <y>245</y>
+     <width>125</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblTrack">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>245</y>
+     <width>85</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Track number</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtReleaseDate">
+   <property name="geometry">
+    <rect>
+     <x>223</x>
+     <y>276</y>
+     <width>125</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtTitle">
+   <property name="geometry">
+    <rect>
+     <x>223</x>
+     <y>214</y>
+     <width>125</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblGenre">
+   <property name="geometry">
+    <rect>
+     <x>178</x>
+     <y>307</y>
+     <width>37</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Genre</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>btnSelectSong</tabstop>
+  <tabstop>txtArtist</tabstop>
+  <tabstop>txtAlbum</tabstop>
+  <tabstop>txtTitle</tabstop>
+  <tabstop>txtTrack</tabstop>
+  <tabstop>txtReleaseDate</tabstop>
+  <tabstop>cmbGenre</tabstop>
+  <tabstop>btnCancel</tabstop>
+  <tabstop>btnSave</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
